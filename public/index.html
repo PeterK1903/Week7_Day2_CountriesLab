@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Country Finder</title>
+  <script type="text/javascript" src="./js/bundle.js"></script>
+  </head>
+  <body>
+
+<div id="app">
+  <h1> Welcome to our App!</h1>
+  <h2> Poulation of the world {{ totalPopulation }}</h2>
+
+<label v-if="countryURL" for="countries"> Select a country:</label>
+<select id="countries">
+  <option value={{country.name}} v-for="country in countryURL">{{country.name}}</option>
+</select>
+
+  <section id="flag" v-if="countryURL" src="countryURL"></section>
+
+  <div v-if="countryURL" class="country" v-for="country in countryURL">
+        
+        </div>
+
+<div class="country">
+
+
+
+</div>
+
+  <!-- // Button used to call to API rather than dynamic. -->
+  <!-- <button v-on:click="fetchCountry" > Gimme the Countries</button> -->
+  <!-- <label for="countries">Choose a country:</label>
+  <select id="countries" v-model="selected">
+  </select> -->
+
+</div>
+
+  </body>
+</html>
